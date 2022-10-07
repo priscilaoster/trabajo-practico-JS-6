@@ -1,0 +1,43 @@
+.encabezado{
+    background-color: gray;
+    width: 100%;
+	position: fixed;
+    left: 0;
+	top: 0px;
+    right: 0px;
+}
+
+h2{
+    font-family: 'Liberation Serif';
+    font-size: 20px;
+    color: black;
+}
+
+#l{
+    display: flex;
+    flex-direction: column;
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+}
+
+#e{ 
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 70px;
+    bottom: 30px;
+   position:absolute;
+}
+
+h3{
+    font-size: 12px;
+}
+
+@font-face {
+    font-family: 'Liberation Serif';
+    src: url('../fuente/LiberationSerif-Regular.ttf');
+    font-style: normal;
+}
+
