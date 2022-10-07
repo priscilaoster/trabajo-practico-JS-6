@@ -93,6 +93,40 @@
                     keydown (onkeydown <br>
             </h3>
         <h2>Propiedades para un formulario JS</h2>
-        <h3></h3>
+        <h3>JavaScript dispone de numerosas propiedades y funciones que facilitan la programación de aplicaciones que manejan formularios. En primer lugar, cuando se carga una página web, el navegador crea automáticamente un array llamado forms y que contiene la referencia a todos los formularios de la página.
+
+            Para acceder al array forms, se utiliza el objeto document, por lo que document.forms es el array que contiene todos los formularios de la página. Como se trata de un array, el acceso a cada formulario se realiza con la misma sintaxis de los arrays. La siguiente instrucción accede al primer formulario de la página:
+            
+            document.forms[0];
+            Además del array de formularios, el navegador crea automáticamente un array llamado elements por cada uno de los formularios de la página. Cada array elements contiene la referencia a todos los elementos (cuadros de texto, botones, listas desplegables, etc.) de ese formulario. Utilizando la sintaxis de los arrays, la siguiente instrucción obtiene el primer elemento del primer formulario de la página:
+            
+            document.forms[0].elements[0];
+        
+            La sintaxis de los arrays no siempre es tan concisa. El siguiente ejemplo muestra cómo obtener directamente el último elemento del primer formulario de la página:
+
+            document.forms[0].elements[document.forms[0].elements.length-1];
+        
+            En un entorno tan cambiante como el diseño web, es muy difícil confiar en que el orden de los formularios se mantenga estable en una página web. Por este motivo, siempre debería evitarse el acceso a los formularios de una página mediante el array document.forms.
+
+            Una forma de evitar los problemas del método anterior consiste en acceder a los formularios de una página a través de su nombre (atributo name) o a través de su atributo id. El objeto document permite acceder directamente a cualquier formulario mediante su atributo name:
+        
+            "var formularioPrincipal = document.formulario;
+            var formularioSecundario = document.otro_formulario;
+            <img src="imagenes/form1.jpg.jpeg" alt="formulario"><br>
+            Accediendo de esta forma a los formularios de la página, el script funciona correctamente aunque se reordenen los formularios o se añadan nuevos formularios a la página. Los elementos de los formularios también se pueden acceder directamente mediante su atributo name:
+
+            var formularioPrincipal = document.formulario; <br>
+            var primerElemento = document.formulario.elemento; <br>
+            <img src="imagenes/form2.jpeg" alt="formulario"> <br>
+            La validación de un formulario consiste en llamar a una función de validación cuando el usuario pulsa sobre el botón de envío del formulario. En esta función, se comprueban si los valores que ha introducido el usuario cumplen las restricciones impuestas por la aplicación.
+            A continuación se muestra el código JavaScript básico necesario para incorporar la validación a un formulario: <br>
+            <img src="imagenes/form3.jpeg" alt="formulario"> <br>
+            Y el esquema de la función validacion() es el siguiente: Utilizando la propiedad checked, es posible comprobar si cada checkbox ha sido seleccionado:
+            <img src="imagenes/form4.jpeg" alt="formulario"> <br>
+            Si se dispone de los siguientes checkbox: <br>
+            <img src="imagenes/form5.jpeg" alt="formulario"> <br>
+            Utilizando la propiedad checked, es posible comprobar si cada checkbox ha sido seleccionado: <br>
+            <img src="imagenes/form6.jpeg" alt="formulario">  <br>
+        </h3>
 </body>
 </html>
